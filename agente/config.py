@@ -21,6 +21,7 @@ class Config:
     imgbb_api_key: str
     public_base_url: str
     marca_nome: str
+    instagram_arroba: str
     cor_primaria: str
     cor_secundaria: str
     cor_texto: str
@@ -37,8 +38,9 @@ def carregar() -> Config:
         imgbb_api_key=os.getenv("IMGBB_API_KEY", "").strip(),
         public_base_url=os.getenv("PUBLIC_BASE_URL", "").strip().rstrip("/"),
         marca_nome=os.getenv("MARCA_NOME", "Pronto Vendi"),
-        cor_primaria=os.getenv("MARCA_COR_PRIMARIA", "#FF5A1F"),
-        cor_secundaria=os.getenv("MARCA_COR_SECUNDARIA", "#1E1E2E"),
+        instagram_arroba=os.getenv("MARCA_ARROBA", "@prontovendipoa"),
+        cor_primaria=os.getenv("MARCA_COR_PRIMARIA", "#6CD000"),
+        cor_secundaria=os.getenv("MARCA_COR_SECUNDARIA", "#0A0A0A"),
         cor_texto=os.getenv("MARCA_COR_TEXTO", "#FFFFFF"),
         modelo=os.getenv("CLAUDE_MODEL", "claude-opus-5-5"),
     )

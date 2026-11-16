@@ -2,9 +2,16 @@
 
 Agente feito com Claude que **analisa o seu Instagram**, **cria artes** e **publica no feed**.
 
+O agente já conhece a Pronto Vendi: intermediação de veículos em Porto Alegre, "vendemos o seu carro em até 40 minutos", "menos enrolação, mais negociação" e +600 carros intermediados. Para mudar essas informações, edite o texto `SISTEMA` em `agente/__main__.py`.
+
 O que ele faz:
 - **Analisa**: lê o perfil, os posts recentes e as métricas (alcance, salvamentos, compartilhamentos, curtidas e comentários). Também olha as imagens dos posts para entender o seu estilo visual.
-- **Cria artes**: gera imagens 1080x1350 (feed), 1080x1080 ou 1080x1920 (story) nas cores da marca, em 4 modelos: `destaque`, `oferta`, `lista` e `citacao`. Ele confere cada arte e refaz se ficar ruim.
+- **Cria artes** com a identidade da Pronto Vendi (preto, verde neon, logo e fonte Montserrat), em 1080x1350 (feed), 1080x1080 ou 1080x1920 (story). Ele confere cada arte e refaz se ficar ruim. Modelos:
+  - `veiculo`: foto do carro, nome, ficha (ano, km), diferenciais, preço e carimbo opcional de **VENDIDO**
+  - `destaque`: título forte + subtítulo (ex. "Vendemos o seu carro em até 40 minutos")
+  - `oferta`: selo grande com um número (ex. "+600 carros intermediados")
+  - `lista`: dicas ou passos numerados
+  - `citacao`: depoimento de cliente com estrelas
 - **Escreve a legenda**: gancho, chamada para ação e hashtags.
 - **Publica**: posta no Instagram. Por padrão **pede a sua confirmação** antes de publicar.
 
@@ -28,7 +35,15 @@ cp .env.example .env             # depois preencha o .env
 | `IMGBB_API_KEY` | Chave gratuita do [imgbb.com](https://api.imgbb.com/). O Instagram só publica imagens que estão numa URL pública, e o imgbb hospeda a arte para isso |
 | `MARCA_*` | Nome e cores da marca usados nas artes |
 
-Para usar as fontes da sua marca, coloque `Bold.ttf` e `Regular.ttf` numa pasta `fontes/`.
+A logo fica em `marca/logo.png` (versão com fundo transparente, gerada a partir de `marca/logo-original.jpg`). As fontes ficam em `fontes/` (Montserrat, licença livre OFL). Para trocar, substitua os arquivos mantendo os nomes.
+
+### Fotos dos carros
+Coloque as fotos dos veículos na pasta `fotos/` (ex. `civic-2019.jpg`) e peça ao agente:
+```
+Você: crie um post do carro da foto civic-2019.jpg: Civic EXL 2019, 45 mil km, automático, R$ 112.900
+Você: faça a arte de vendido do civic-2019.jpg, vendemos em 35 minutos
+```
+O agente olha a foto para identificar o carro, mas **nunca inventa** ano, km ou preço: se faltar algum dado, ele pergunta.
 
 ### Como obter o token do Instagram
 
@@ -48,14 +63,14 @@ Modo conversa:
 python -m agente
 ```
 ```
-Você: analise meu perfil e me diga o que está funcionando
-Você: crie 3 artes para a Black Friday seguindo o estilo dos meus melhores posts
-Você: publique a segunda com uma legenda chamando para o direct
+Você: analise meu perfil e monte um plano de conteúdo para as próximas 2 semanas
+Você: crie um post explicando como funciona vender o carro com a gente
+Você: publique com uma legenda chamando para agendar a avaliação
 ```
 
 Um pedido direto:
 ```bash
-python -m agente "analise meus últimos 20 posts, crie uma arte no formato que mais engaja e publique"
+python -m agente "crie um post de prova social com os +600 carros intermediados e publique"
 ```
 
 Opções:
@@ -79,6 +94,9 @@ agente/
   ferramentas.py  # ferramentas que o Claude usa: perfil, posts, métricas, imagens, criar_arte, publicar_post
   instagram.py    # cliente da API do Instagram
   artes.py        # gerador de artes (Pillow)
+marca/            # logo
+fontes/           # Montserrat
+fotos/            # coloque aqui as fotos dos carros (não vão para o Git)
   hospedagem.py   # envia a arte para uma URL pública (imgbb)
   config.py       # leitura do .env
 ```

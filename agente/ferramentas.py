@@ -90,6 +90,34 @@ def criar_ferramentas(cfg: Config, ig: Instagram | None, modo_publicacao: str):
         return blocos
 
     @beta_tool
+    def listar_fotos() -> str:
+        """Lista as fotos de veículos disponíveis na pasta fotos/ para usar no modelo "veiculo"."""
+        artes.PASTA_FOTOS.mkdir(exist_ok=True)
+        fotos = sorted(
+            f.name for f in artes.PASTA_FOTOS.iterdir()
+            if f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+        )
+        return _json(fotos) if fotos else "Nenhuma foto na pasta fotos/. Peça ao usuário para colocar as fotos dos carros lá."
+
+    @beta_tool
+    def ver_foto(arquivo: str) -> list[dict]:
+        """Mostra uma foto da pasta fotos/ para você identificar o carro e avaliar se a foto está boa.
+
+        Args:
+            arquivo: Nome do arquivo (obtido em listar_fotos).
+        """
+        caminho = (artes.PASTA_FOTOS / Path(arquivo).name).resolve()
+        if caminho.parent != artes.PASTA_FOTOS.resolve() or not caminho.exists():
+            return [{"type": "text", "text": f"Foto {arquivo} não encontrada."}]
+        from io import BytesIO
+        from PIL import Image, ImageOps
+        im = ImageOps.exif_transpose(Image.open(caminho)).convert("RGB")
+        im.thumbnail((1280, 1280))
+        buf = BytesIO()
+        im.save(buf, "JPEG", quality=85)
+        return [{"type": "text", "text": f"Foto {arquivo}:"}, _imagem_b64(buf.getvalue())]
+
+    @beta_tool
     def criar_arte(
         modelo: str,
         titulo: str,
@@ -98,24 +126,28 @@ def criar_ferramentas(cfg: Config, ig: Instagram | None, modo_publicacao: str):
         itens: list[str] | None = None,
         destaque: str = "",
         formato: str = "retrato",
-        cor_fundo: str = "",
-        cor_destaque: str = "",
+        foto: str = "",
+        vendido: bool = False,
+        estrelas: int = 0,
     ) -> list[dict]:
-        """Cria uma arte (JPEG) para o feed e devolve a imagem para você revisar antes de publicar.
+        """Cria uma arte (JPEG) com a identidade da marca (preto, verde neon, logo) e devolve a imagem para você revisar.
+
+        Coloque *palavras* entre asteriscos no título para pintá-las de verde (use em 1 a 3 palavras-chave).
 
         Args:
-            modelo: "destaque" (título + subtítulo), "oferta" (selo com preço/desconto), "lista" (itens numerados) ou "citacao" (frase com aspas).
-            titulo: Texto principal, curto e forte (idealmente até 8 palavras).
-            subtitulo: Texto de apoio. No modelo "citacao" é o autor.
-            cta: Texto do botão de chamada, ex. "Chame no direct". Vazio para não exibir.
-            itens: Lista de até 6 itens curtos (apenas no modelo "lista").
-            destaque: Texto do selo no modelo "oferta", ex. "-30%" ou "R$ 49,90".
+            modelo: "veiculo" (foto do carro + ficha + preço), "destaque" (título + subtítulo), "oferta" (selo grande com número/benefício), "lista" (itens numerados) ou "citacao" (depoimento de cliente).
+            titulo: Texto principal, curto. No "veiculo" é marca/modelo/versão (ex. "Honda *Civic* EXL"). No "citacao" é o depoimento.
+            subtitulo: Texto de apoio. No "veiculo" é a ficha (ex. "2019 · 45.000 km · Automático"). No "citacao" é o nome do cliente.
+            cta: Texto do botão, ex. "Chame no direct", "Agende sua avaliação". Vazio para não exibir.
+            itens: No "lista": até 6 itens curtos. No "veiculo": até 4 diferenciais curtos (ex. "Único dono").
+            destaque: No "veiculo": preço (ex. "R$ 112.900") ou frase curta (ex. "Vendido em 38 min"). No "oferta": texto do selo (ex. "+600", "40 min").
             formato: "retrato" (1080x1350, recomendado para feed), "quadrado" (1080x1080) ou "story" (1080x1920).
-            cor_fundo: Cor de fundo em hex (#RRGGBB). Vazio usa a cor da marca.
-            cor_destaque: Cor de destaque em hex. Vazio usa a cor da marca.
+            foto: Obrigatória no "veiculo": nome do arquivo na pasta fotos/ (veja listar_fotos) ou URL de uma imagem.
+            vendido: No "veiculo": True aplica o carimbo VENDIDO sobre a foto.
+            estrelas: No "citacao": quantidade de estrelas de avaliação (0 a 5).
         """
         caminho = artes.criar_arte(
-            cfg, modelo, titulo, subtitulo, cta, itens, destaque, formato, cor_fundo, cor_destaque
+            cfg, modelo, titulo, subtitulo, cta, itens, destaque, formato, foto, vendido, estrelas
         )
         return [
             {"type": "text", "text": f"Arte criada: {caminho.name}. Revise a imagem abaixo; se algo estiver ruim, crie outra."},
@@ -157,6 +189,8 @@ def criar_ferramentas(cfg: Config, ig: Instagram | None, modo_publicacao: str):
         listar_posts,
         metricas_da_conta,
         ver_imagens_dos_posts,
+        listar_fotos,
+        ver_foto,
         criar_arte,
         publicar_post,
     ]
