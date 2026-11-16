@@ -94,11 +94,11 @@ agente/
   ferramentas.py  # ferramentas que o Claude usa: perfil, posts, métricas, imagens, criar_arte, publicar_post
   instagram.py    # cliente da API do Instagram
   artes.py        # gerador de artes (Pillow)
+  hospedagem.py   # envia a arte para uma URL pública (imgbb)
+  config.py       # leitura do .env
 marca/            # logo
 fontes/           # Montserrat
 fotos/            # coloque aqui as fotos dos carros (não vão para o Git)
-  hospedagem.py   # envia a arte para uma URL pública (imgbb)
-  config.py       # leitura do .env
 ```
 
 ## Limites da API do Instagram
