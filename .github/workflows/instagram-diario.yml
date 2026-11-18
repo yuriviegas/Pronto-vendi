@@ -1,0 +1,86 @@
+name: Instagram diário
+
+# Horários em UTC (Brasília = UTC-3). O GitHub pode atrasar alguns minutos.
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 08:30 bom dia (story)
+    - cron: "0 15 * * *"    # 12:00 Reel
+    - cron: "0 17 * * *"    # 14:00 story da tarde
+    - cron: "30 20 * * *"   # 17:30 Reel da tarde
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "O que gerar"
+        type: choice
+        options: [bom_dia, reel_meio_dia, story_tarde, reel_tarde, todos]
+        default: todos
+      data:
+        description: "Data AAAA-MM-DD (vazio = hoje)"
+        required: false
+      publicar:
+        description: "Publicar no Instagram? (senão só gera para revisão)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: instagram-diario
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Escolher o horário
+        id: slot
+        run: |
+          case "${{ github.event.schedule }}" in
+            "30 11 * * *") echo "slot=bom_dia" >> "$GITHUB_OUTPUT" ;;
+            "0 15 * * *")  echo "slot=reel_meio_dia" >> "$GITHUB_OUTPUT" ;;
+            "0 17 * * *")  echo "slot=story_tarde" >> "$GITHUB_OUTPUT" ;;
+            "30 20 * * *") echo "slot=reel_tarde" >> "$GITHUB_OUTPUT" ;;
+            *)             echo "slot=${{ inputs.slot }}" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      # Trava de segurança: nos horários automáticos só publica se a variável
+      # do repositório PUBLICAR_INSTAGRAM for "sim" (Settings > Secrets and variables > Actions > Variables).
+      - name: Gerar e publicar
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_API_BASE: ${{ vars.INSTAGRAM_API_BASE || 'https://graph.instagram.com/v21.0' }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+        run: |
+          ARGS="${{ steps.slot.outputs.slot }}"
+          if [ -n "${{ inputs.data }}" ]; then ARGS="$ARGS --data ${{ inputs.data }}"; fi
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            [ "${{ vars.PUBLICAR_INSTAGRAM }}" = "sim" ] || ARGS="$ARGS --simular"
+          else
+            [ "${{ inputs.publicar }}" = "true" ] || ARGS="$ARGS --simular"
+          fi
+          echo "python -m agente.diario $ARGS"
+          python -m agente.diario $ARGS
+
+      - name: Guardar arquivos gerados para revisão
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: instagram-${{ steps.slot.outputs.slot }}-${{ github.run_id }}
+          path: |
+            saida/**/*.jpg
+            saida/**/*.mp4
+            !saida/**/tmp/**
+          retention-days: 14

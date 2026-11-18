@@ -106,19 +106,74 @@ class Instagram:
         return resultado
 
     # ------------------------------------------------------------ publicação
+    def _aguardar(self, cid: str, tentativas: int = 30, intervalo: float = 2) -> None:
+        """Espera o Instagram terminar de processar o container."""
+        for _ in range(tentativas):
+            dados = self._req("GET", cid, fields="status_code")
+            status = dados.get("status_code")
+            if status == "FINISHED":
+                return
+            if status in ("ERROR", "EXPIRED"):
+                raise InstagramErro(f"Falha ao processar a mídia (status {status})")
+            time.sleep(intervalo)
+        raise InstagramErro("O Instagram demorou demais para processar a mídia")
+
+    def _publicar_container(self, cid: str) -> dict:
+        publicado = self._req("POST", f"{self.user_id}/media_publish", creation_id=cid)
+        media_id = publicado["id"]
+        try:
+            link = self._req("GET", media_id, fields="permalink").get("permalink")
+        except InstagramErro:
+            link = None
+        return {"media_id": media_id, "permalink": link}
+
+    def publicar_story_imagem(self, url_imagem: str) -> dict:
+        """Story de imagem. A imagem precisa estar numa URL pública (JPEG)."""
+        container = self._req(
+            "POST", f"{self.user_id}/media", image_url=url_imagem, media_type="STORIES"
+        )
+        self._aguardar(container["id"])
+        return self._publicar_container(container["id"])
+
+    def publicar_video(self, caminho: str, legenda: str = "", tipo: str = "REELS") -> dict:
+        """Reel (tipo REELS) ou story de vídeo (tipo STORIES).
+
+        Usa o upload "resumable": o arquivo vai direto do computador/servidor
+        para o Instagram, sem precisar de hospedagem pública.
+        """
+        import os
+
+        params = {"media_type": tipo, "upload_type": "resumable"}
+        if tipo == "REELS" and legenda:
+            params["caption"] = legenda
+        container = self._req("POST", f"{self.user_id}/media", **params)
+        cid = container["id"]
+        uri = container.get("uri") or (
+            f"https://rupload.facebook.com/ig-api-upload/{self.base.rsplit('/', 1)[-1]}/{cid}"
+        )
+        tamanho = os.path.getsize(caminho)
+        with open(caminho, "rb") as f:
+            r = requests.post(
+                uri,
+                headers={
+                    "Authorization": f"OAuth {self.token}",
+                    "offset": "0",
+                    "file_size": str(tamanho),
+                },
+                data=f,
+                timeout=300,
+            )
+        if r.status_code >= 400:
+            raise InstagramErro(f"Falha no envio do vídeo ({r.status_code}): {r.text[:300]}")
+        self._aguardar(cid, tentativas=30, intervalo=10)
+        return self._publicar_container(cid)
+
     def publicar_imagem(self, url_imagem: str, legenda: str) -> dict:
         container = self._req(
             "POST", f"{self.user_id}/media", image_url=url_imagem, caption=legenda
         )
         cid = container["id"]
-        # Aguarda o Instagram processar a imagem
-        for _ in range(30):
-            status = self._req("GET", cid, fields="status_code").get("status_code")
-            if status == "FINISHED":
-                break
-            if status in ("ERROR", "EXPIRED"):
-                raise InstagramErro(f"Falha ao processar a imagem (status {status})")
-            time.sleep(2)
+        self._aguardar(cid)
         publicado = self._req("POST", f"{self.user_id}/media_publish", creation_id=cid)
         media_id = publicado["id"]
         try:

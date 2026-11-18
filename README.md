@@ -86,6 +86,50 @@ Exemplo com `cron` (Linux/macOS), todo dia às 10h:
 0 10 * * * cd /caminho/Pronto-vendi && .venv/bin/python -m agente --auto "Analise o perfil e publique um post novo sobre um tema que ainda não foi usado esta semana" >> agente.log 2>&1
 ```
 
+## Publicação diária automática (Reels + stories)
+
+O GitHub publica sozinho, todos os dias, o que está em `conteudo/calendario.json`:
+
+| Horário (Brasília) | O quê |
+|---|---|
+| 08:30 | Story de bom dia |
+| 12:00 | Reel (vídeo com trilha original e logo) |
+| 14:00 | Story com pergunta |
+| 17:30 | Reel da tarde |
+
+Os vídeos e as artes são gerados na hora (`agente/reels.py`, `agente/stories.py`, `agente/trilha.py`),
+com a logo de `marca/` e a fonte de `fontes/`. A trilha é sintetizada, sem música de terceiros.
+
+### Ligar a publicação
+
+1. Em **Settings → Secrets and variables → Actions → Secrets**, crie:
+   - `INSTAGRAM_ACCESS_TOKEN`: o token do Instagram (veja "Como obter o token" acima)
+   - `IMGBB_API_KEY`: chave gratuita do imgbb (os stories de imagem precisam de uma URL pública)
+   - `INSTAGRAM_USER_ID` (opcional)
+2. Em **Variables**, crie `PUBLICAR_INSTAGRAM` com o valor `sim`.
+   Enquanto ela não existir, os horários automáticos **só geram os arquivos** (modo simulação),
+   sem publicar nada.
+3. Se a conta usa a Graph API do Facebook (Página), crie a variável `INSTAGRAM_API_BASE` com
+   `https://graph.facebook.com/v21.0`.
+
+Para testar na hora: aba **Actions → Instagram diário → Run workflow**. Escolha o horário e se quer
+publicar. Os arquivos gerados ficam para baixar no fim da execução (Artifacts), por 14 dias.
+
+No computador:
+```bash
+python -m agente.diario todos --simular              # gera o conteúdo de hoje em saida/
+python -m agente.diario reel_tarde --data 2026-11-20 --simular
+```
+
+### Conteúdo
+- O calendário é montado por `conteudo/montar_calendario.py`. Para mudar um texto, edite lá e rode
+  `python conteudo/montar_calendario.py`.
+- Quando faltarem 5 dias ou menos, o resumo da execução avisa. Se acabar, a execução falha (o GitHub manda
+  e-mail) e nada é publicado.
+- Figurinhas interativas (enquete, quiz, caixinha) não existem na API do Instagram; a chamada para ação
+  vai escrita na arte ("responde no direct").
+- O token do Instagram vale 60 dias: renove e atualize o secret antes de vencer.
+
 ## Estrutura
 
 ```

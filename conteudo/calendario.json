@@ -1,0 +1,1125 @@
+{
+ "_leia": "Gerado por conteudo/montar_calendario.py. Edite lá e rode o script de novo.",
+ "dias": {
+  "2026-11-18": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Metade da semana já foi. E a gente está cada vez mais perto."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "LOJISTAS."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "INVESTIDORES."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "TODOS DE",
+       "OLHO NO",
+       "*SEU CARRO.*"
+      ]
+     }
+    ],
+    "legenda": "Em breve, o seu carro no centro da disputa. 👀\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONTA PRA GENTE",
+    "titulo": "Qual foi a *pior proposta* que já te fizeram pelo seu carro?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "MITO",
+       "OU",
+       "*VERDADE?*"
+      ],
+      "sub": "Parte 4"
+     },
+     {
+      "tipo": "mito",
+      "indice": "1 / 3",
+      "frase": "“Pneu gasto não muda o preço.”",
+      "verdade": false,
+      "texto": "O comprador já calcula a troca e pede desconto."
+     },
+     {
+      "tipo": "mito",
+      "indice": "2 / 3",
+      "frase": "“Carro de único dono passa mais confiança.”",
+      "verdade": true,
+      "texto": "Histórico simples costuma deixar o comprador mais tranquilo."
+     },
+     {
+      "tipo": "mito",
+      "indice": "3 / 3",
+      "frase": "“Quanto mais tempo anunciado, melhor a oferta.”",
+      "verdade": false,
+      "texto": "Anúncio parado há meses levanta desconfiança, e a proposta cai."
+     }
+    ],
+    "legenda": "Quantas você acertou? 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-19": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Quem tem carro pra vender, guarda esse nome: Pronto Vendi."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "gancho_numero",
+      "numero": "3",
+      "linhas": [
+       "COISAS QUE",
+       "*DESVALORIZAM*",
+       "O SEU",
+       "CARRO"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "MANUTENÇÃO",
+       "ATRASADA."
+      ],
+      "texto": "Revisão vencida vira desconfiança e desconto."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "RISCOS E",
+       "AMASSADOS."
+      ],
+      "texto": "Cada detalhe na lataria vira argumento na negociação."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "DOCUMENTO",
+       "PENDENTE."
+      ],
+      "texto": "Débitos travam a transferência e assustam o comprador."
+     }
+    ],
+    "legenda": "Salva pra cuidar disso antes de vender 📌\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "SINCERIDADE",
+    "titulo": "O que mais te *irrita* na hora de vender carro?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "VOCÊ NÃO",
+       "CORRE ATRÁS",
+       "DE COMPRADOR."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "OS COMPRADORES",
+       "*DISPUTAM*",
+       "O SEU CARRO."
+      ]
+     }
+    ],
+    "legenda": "Inverte o jogo. 👀\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-20": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Sexta é dia de fechar a semana com tudo. Por aqui, tem novidade chegando."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "gancho_numero",
+      "numero": "4",
+      "linhas": [
+       "COISAS PRA",
+       "FAZER *ANTES*",
+       "DE VENDER",
+       "SEU CARRO"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "LIMPEZA",
+       "CAPRICHADA."
+      ],
+      "texto": "Por dentro e por fora. É a primeira coisa que o comprador repara."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "REVISÃO",
+       "EM DIA."
+      ],
+      "texto": "Óleo, freios e pneus em ordem mostram um carro bem cuidado."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "DOCUMENTOS",
+       "EM ORDEM."
+      ],
+      "texto": "IPVA, licenciamento e multas quitados evitam travar a transferência."
+     },
+     {
+      "tipo": "item",
+      "numero": "04",
+      "titulo": [
+       "SABER O",
+       "VALOR REAL."
+      ],
+      "texto": "Pesquise o preço de mercado do seu modelo, não só a tabela."
+     }
+    ],
+    "legenda": "Salva esse checklist 📌\n\nQual desses você costuma esquecer?\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONTA PRA GENTE",
+    "titulo": "Qual seu *maior medo* ao vender o carro?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "COMO A GENTE",
+       "*TRABALHA:*"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "SEGURANÇA."
+      ],
+      "texto": "Do primeiro contato até o dinheiro na conta."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "TRANSPARÊNCIA."
+      ],
+      "texto": "Você vê cada oferta pelo seu carro."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "AGILIDADE."
+      ],
+      "texto": "Sem curioso, sem visita que não aparece."
+     }
+    ],
+    "legenda": "✅ Segurança do início ao fim\n✅ Transparência em cada oferta\n✅ Agilidade, sem enrolação\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-21": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Bom sábado! Aproveita o carro, o sol e a família."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "gancho_numero",
+      "numero": "3",
+      "linhas": [
+       "SINAIS DE QUE",
+       "É HORA DE",
+       "*VENDER*",
+       "SEU CARRO"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "MANUTENÇÃO",
+       "SÓ SOBE."
+      ],
+      "texto": "Quando a oficina vira rotina, cada mês parado custa mais."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "MAIS PARADO",
+       "DO QUE RODANDO."
+      ],
+      "texto": "Carro parado na garagem continua perdendo valor."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "NÃO SERVE",
+       "MAIS PRA VOCÊ."
+      ],
+      "texto": "A família cresceu, a rotina mudou. O carro precisa acompanhar."
+     }
+    ],
+    "legenda": "Algum desses é o seu caso? 👀\n\nComenta aqui 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "RESPONDE AÍ",
+    "titulo": "Você confia na *tabela Fipe* na hora de vender?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "FIPE",
+       "NÃO É",
+       "*PREÇO DE VENDA.*"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "A FIPE",
+       "É MÉDIA."
+      ],
+      "texto": "Ela mostra preços médios do mercado, não o valor do SEU carro."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "O ESTADO",
+       "MANDA."
+      ],
+      "texto": "Quilometragem, conservação e revisões mudam o valor."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "A PROCURA",
+       "PESA."
+      ],
+      "texto": "Modelos muito procurados vendem melhor. Os menos procurados, nem tanto."
+     }
+    ],
+    "legenda": "Você usava a Fipe como preço final? 👀\n\nSalva pra lembrar na hora de anunciar.\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-22": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Domingo é dia de descanso. Semana que vem tem mais novidade por aqui."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "“FAZ 35",
+       "À VISTA?”"
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "“AMANHÃ",
+       "PASSO AÍ.”"
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "“TEM FOTO",
+       "DO MOTOR?”"
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "CHEGA",
+       "*DISSO.*"
+      ]
+     }
+    ],
+    "legenda": "Quem nunca ouviu uma dessas? 😅\n\nConta a pior que já te mandaram 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "QUEREMOS SABER",
+    "titulo": "Qual *carro* você tem hoje?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "MITO",
+       "OU",
+       "*VERDADE?*"
+      ],
+      "sub": "Parte 2"
+     },
+     {
+      "tipo": "mito",
+      "indice": "1 / 3",
+      "frase": "“Carro com mais de 100 mil km não vende.”",
+      "verdade": false,
+      "texto": "Vende sim. A quilometragem pesa no preço, mas estado e manutenção contam muito."
+     },
+     {
+      "tipo": "mito",
+      "indice": "2 / 3",
+      "frase": "“Manual e chave reserva valorizam o carro.”",
+      "verdade": true,
+      "texto": "Mostram cuidado e evitam desconto na negociação."
+     },
+     {
+      "tipo": "mito",
+      "indice": "3 / 3",
+      "frase": "“Dá pra transferir com multa pendente.”",
+      "verdade": false,
+      "texto": "IPVA, licenciamento e multas precisam estar quitados para transferir."
+     }
+    ],
+    "legenda": "Quantas você acertou? 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-23": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Semana nova, planos novos. O nosso está quase pronto."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "SEU CARRO",
+       "PARADO",
+       "*PERDE VALOR.*"
+      ],
+      "sub": "Todo mês um pouco."
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "E SE ELE",
+       "VIRASSE",
+       "*DINHEIRO?*"
+      ]
+     }
+    ],
+    "legenda": "Aquele carro que quase ninguém usa... já pensou em vender? 👀\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "SINCERIDADE",
+    "titulo": "Prefere vender *sozinho* ou com ajuda?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "gancho_numero",
+      "numero": "3",
+      "linhas": [
+       "DICAS DE",
+       "FOTO QUE",
+       "*VENDEM*",
+       "SEU CARRO"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "LUZ",
+       "DO DIA."
+      ],
+      "texto": "Nada de foto à noite ou na garagem escura."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "CARRO",
+       "LIMPO."
+      ],
+      "texto": "Lavado por fora, aspirado por dentro. Sem objetos no banco."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "TODOS OS",
+       "ÂNGULOS."
+      ],
+      "texto": "Frente, traseira, laterais, painel, bancos e porta-malas."
+     }
+    ],
+    "legenda": "Salva e usa na próxima venda 📸\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-24": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Terça é dia de colocar os planos em movimento. O nosso já está andando."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "IMAGINA:"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "VÁRIAS",
+       "OFERTAS PELO",
+       "SEU CARRO."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "E VOCÊ",
+       "SÓ *ESCOLHE.*"
+      ]
+     }
+    ],
+    "legenda": "Em vez de correr atrás de comprador, deixar os compradores disputarem o seu carro. 👀\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONTA PRA GENTE",
+    "titulo": "Já levou *bolo* de comprador?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "E SE LOJISTAS",
+       "E INVESTIDORES",
+       "*DISPUTASSEM*",
+       "O SEU SUV?"
+      ]
+     },
+     {
+      "tipo": "disputa",
+      "lances": [
+       [
+        "Investidor 1",
+        89000
+       ],
+       [
+        "Lojista 1",
+        91000
+       ],
+       [
+        "Lojista 2",
+        92500
+       ],
+       [
+        "Investidor 2",
+        94000
+       ],
+       [
+        "Lojista 1",
+        95800
+       ],
+       [
+        "Investidor 3",
+        97500
+       ]
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "QUEM DÁ MAIS,",
+       "*LEVA.*"
+      ]
+     }
+    ],
+    "legenda": "Seu carro, várias ofertas, uma escolha: a melhor. 👀\n\n(Valores do vídeo são um exemplo ilustrativo.)\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-25": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Quarta-feira, café na mão e foco. A novidade está chegando."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "gancho_numero",
+      "numero": "3",
+      "linhas": [
+       "PERGUNTAS",
+       "PRA FAZER",
+       "*ANTES*",
+       "DE VENDER"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "QUANTO ELE",
+       "VALE HOJE?"
+      ],
+      "texto": "No mercado de verdade, não só na tabela."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "DOCUMENTOS",
+       "EM DIA?"
+      ],
+      "texto": "Débito pendente trava a transferência."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "QUEM CUIDA DA",
+       "TRANSFERÊNCIA?"
+      ],
+      "texto": "Sem ela feita, a responsabilidade continua com você."
+     }
+    ],
+    "legenda": "Você sabia responder as 3? 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "RESPONDE AÍ",
+    "titulo": "Venderia seu carro para quem desse o *maior lance*?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "ANÚNCIO",
+       "PARADO."
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "TELEFONE",
+       "TOCANDO TODA",
+       "HORA."
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "NEGOCIAÇÃO",
+       "QUE NÃO ANDA."
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "TEM JEITO",
+       "*MELHOR.*"
+      ]
+     }
+    ],
+    "legenda": "Vender carro não precisa ser um segundo emprego. 😅\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-26": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Quinta é quase sexta. E a gente está quase pronto."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "+600",
+       "CARROS",
+       "*INTERMEDIADOS*"
+      ],
+      "sub": "pela nossa equipe."
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "O NOME",
+       "É NOVO."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "A EXPERIÊNCIA,",
+       "*NÃO.*"
+      ]
+     }
+    ],
+    "legenda": "Mais de 600 carros já passaram pelas mãos da nossa equipe. 💪\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "QUEREMOS SABER",
+    "titulo": "O que você faria com o *dinheiro* da venda?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "MITO",
+       "OU",
+       "*VERDADE?*"
+      ],
+      "sub": "Parte 3"
+     },
+     {
+      "tipo": "mito",
+      "indice": "1 / 3",
+      "frase": "“Carro sujo vende pelo mesmo preço.”",
+      "verdade": false,
+      "texto": "Sujeira vira argumento de desconto na hora da negociação."
+     },
+     {
+      "tipo": "mito",
+      "indice": "2 / 3",
+      "frase": "“Histórico de revisões valoriza.”",
+      "verdade": true,
+      "texto": "Notas e carimbos mostram que o carro foi bem cuidado."
+     },
+     {
+      "tipo": "mito",
+      "indice": "3 / 3",
+      "frase": "“Recall pendente não faz diferença.”",
+      "verdade": false,
+      "texto": "Recall em aberto assusta o comprador. Resolva antes de vender."
+     }
+    ],
+    "legenda": "Acertou todas? Conta aqui 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-27": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Sextou! Bom fim de semana. Na próxima, tem mais por aqui."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "*SEGURANÇA*",
+       "DO INÍCIO",
+       "AO FIM."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "*TRANSPARÊNCIA*",
+       "EM CADA",
+       "OFERTA."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "*AGILIDADE*",
+       "SEM",
+       "ENROLAÇÃO."
+      ]
+     }
+    ],
+    "legenda": "Três palavras que vão guiar cada negociação. 💚\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONFESSA AÍ",
+    "titulo": "Seu carro está com a *revisão* em dia?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "ALGO NOVO",
+       "ESTÁ",
+       "*CHEGANDO.*"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "PORTO ALEGRE,",
+       "*PREPARE-SE.*"
+      ],
+      "sub": "Ativa as notificações do perfil."
+     }
+    ],
+    "legenda": "Falta pouco. 👀\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-28": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Bom sábado! Já pensou no que faria com o dinheiro da venda do seu carro?"
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "O QUE O",
+       "COMPRADOR",
+       "*VÊ PRIMEIRO?*"
+      ]
+     },
+     {
+      "tipo": "item",
+      "numero": "01",
+      "titulo": [
+       "AS FOTOS."
+      ],
+      "texto": "É ali que ele decide se chama você ou passa pro próximo."
+     },
+     {
+      "tipo": "item",
+      "numero": "02",
+      "titulo": [
+       "O ESTADO."
+      ],
+      "texto": "Pneus, bancos e painel contam a história do carro."
+     },
+     {
+      "tipo": "item",
+      "numero": "03",
+      "titulo": [
+       "A PAPELADA."
+      ],
+      "texto": "Documentação em dia passa confiança e acelera o negócio."
+     }
+    ],
+    "legenda": "Capricha nesses 3 e a negociação muda de nível. 💪\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONTA PRA GENTE",
+    "titulo": "Qual sua maior *dúvida* sobre vender carro?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "E SE LOJISTAS",
+       "E INVESTIDORES",
+       "*DISPUTASSEM*",
+       "O SEU HATCH?"
+      ]
+     },
+     {
+      "tipo": "disputa",
+      "lances": [
+       [
+        "Lojista 1",
+        41000
+       ],
+       [
+        "Investidor 1",
+        42200
+       ],
+       [
+        "Lojista 2",
+        43500
+       ],
+       [
+        "Investidor 2",
+        44800
+       ],
+       [
+        "Lojista 3",
+        45600
+       ],
+       [
+        "Investidor 1",
+        46300
+       ]
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "QUEM DÁ MAIS,",
+       "*LEVA.*"
+      ]
+     }
+    ],
+    "legenda": "Não importa o tamanho do carro: a disputa é pela melhor oferta. 👀\n\n(Valores do vídeo são um exemplo ilustrativo.)\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-29": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Bom domingo! Descansa, que a gente segue trabalhando na novidade."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "VENDER",
+       "SOZINHO",
+       "*CANSA.*"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "FOTO,",
+       "ANÚNCIO,"
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "MENSAGEM,",
+       "VISITA,"
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "PECHINCHA,",
+       "PAPELADA."
+      ],
+      "riscar": true
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "A GENTE",
+       "*RESOLVE.*"
+      ],
+      "sub": "Em breve em Porto Alegre."
+     }
+    ],
+    "legenda": "Quanto tempo você já perdeu tentando vender um carro? ⏳\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "RESPONDE AÍ",
+    "titulo": "Você já vendeu carro para uma *loja*?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "*MENOS*",
+       "ENROLAÇÃO."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "*MAIS*",
+       "NEGOCIAÇÃO."
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "ESSE É O",
+       "NOSSO *JEITO.*"
+      ]
+     }
+    ],
+    "legenda": "Simples assim. 💚\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-11-30": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Último dia de novembro. Dezembro chega com novidade em Porto Alegre."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "QUAL CARRO",
+       "VOCÊ QUER",
+       "*VENDER?*"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "CONTA AQUI",
+       "NOS *COMENTÁRIOS.*"
+      ],
+      "sub": "A gente quer conhecer você."
+     }
+    ],
+    "legenda": "Modelo e ano aqui embaixo 👇 Queremos saber quem vai estrear com a gente!\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "QUEREMOS SABER",
+    "titulo": "O que você *espera* da Pronto Vendi?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "DÚVIDA SOBRE",
+       "*VENDER*",
+       "SEU CARRO?"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "MANDA NO",
+       "*DIRECT.*"
+      ],
+      "sub": "A gente responde tudo."
+     }
+    ],
+    "legenda": "Pergunta o que quiser no direct 📩\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  },
+  "2026-12-01": {
+   "bom_dia": {
+    "modelo": "saudacao",
+    "titulo": "Bom dia, *Porto Alegre.*",
+    "texto": "Dezembro chegou. E com ele, um novo jeito de vender carro em Porto Alegre."
+   },
+   "reel_meio_dia": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "SEU CARRO",
+       "VALE MAIS",
+       "DO QUE TE",
+       "*OFERECERAM?*"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "TALVEZ",
+       "*SIM.*"
+      ],
+      "sub": "Com mais compradores disputando, a oferta pode melhorar."
+     }
+    ],
+    "legenda": "Já sentiu que a proposta pelo seu carro foi baixa demais? 👇\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   },
+   "story_tarde": {
+    "modelo": "pergunta",
+    "topo": "CONTA PRA GENTE",
+    "titulo": "Qual carro você *quer vender* primeiro com a gente?",
+    "cta": "Responde no direct"
+   },
+   "reel_tarde": {
+    "cenas": [
+     {
+      "tipo": "frases",
+      "linhas": [
+       "FALTA",
+       "*POUCO.*"
+      ]
+     },
+     {
+      "tipo": "frases",
+      "linhas": [
+       "E SE AS",
+       "OFERTAS",
+       "VIESSEM ATÉ",
+       "*VOCÊ?*"
+      ]
+     }
+    ],
+    "legenda": "Ativa as notificações pra não perder a novidade 🔔\n\nMenos enrolação. Mais negociação. Em breve em Porto Alegre 🔔\n\n#portoalegre #poa #vendaseucarro #carrosusados #prontovendi"
+   }
+  }
+ }
+}
