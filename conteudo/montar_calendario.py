@@ -169,7 +169,7 @@ BOM_DIA = [
 ]
 
 PERGUNTAS = [
-    ("CONTA PRA GENTE", "Qual foi a *pior proposta* que já te fizeram pelo seu carro?"),
+    ("RESPONDE AÍ", "Você prefere vender *rápido* ou pelo *maior preço*?"),
     ("SINCERIDADE", "O que mais te *irrita* na hora de vender carro?"),
     ("CONTA PRA GENTE", "Qual seu *maior medo* ao vender o carro?"),
     ("RESPONDE AÍ", "Você confia na *tabela Fipe* na hora de vender?"),

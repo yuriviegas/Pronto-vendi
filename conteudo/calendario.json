@@ -34,8 +34,8 @@
    },
    "story_tarde": {
     "modelo": "pergunta",
-    "topo": "CONTA PRA GENTE",
-    "titulo": "Qual foi a *pior proposta* que já te fizeram pelo seu carro?",
+    "topo": "RESPONDE AÍ",
+    "titulo": "Você prefere vender *rápido* ou pelo *maior preço*?",
     "cta": "Responde no direct"
    },
    "reel_tarde": {
